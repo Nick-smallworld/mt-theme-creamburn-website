@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--
+Design by http://www.rocketwebsitetemplates.com
+Movable Type Template by Nick http://smallworld.west-tokyo.com
+Released for free under a Creative Commons Attribution 3.0 License
+-->
+
+<head>
+<mt:Include module="<__trans phrase="HTML Head">">
+<title><$mt:WebsiteName encode_html="1"$>: <__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"></title>
+<mt:If name="datebased_archive">
+    <mt:ArchivePrevious><link rel="prev" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>" /></mt:ArchivePrevious>
+    <mt:ArchiveNext><link rel="next" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>" /></mt:ArchiveNext>
+</mt:If>
+</head>
+
+<body>
+
+<div class="main">
+
+<mt:Include module="<__trans phrase="Banner Header">">
+
+    <div class="content">
+
+    <div class="content_resize">
+
+        <div class="mainbar">
+
+        <mt:Include module="BreadCrumbs">
+
+        <div class="article">
+        <mt:If name="datebased_archive">
+            <mt:Ignore><!-- Title for category-monthly entry listings --></mt:Ignore>
+            <h1 id="page-title"><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"></h1>
+        <mt:Else>
+            <mt:Ignore><!-- Title for category entry listings --></mt:Ignore>
+            <h1 id="page-title"><__trans phrase="Recently in <em>[_1]</em> Category" params="<$mt:ArchiveTitle$>"></h1>
+        </mt:If>
+        </div>
+
+        <mt:Entries limit="$limit">
+        <div class="article">
+            <h2><a href="<mt:PagePermaLink>"><mt:PageTitle /></a></h2><div class="clr"></div>
+            <p>Posted by <mt:PageAuthorDisplayName /> &nbsp;|&nbsp; Category <mt:PageCategories glue=","><a href="<mt:CategoryArchiveLink>"><mt:CategoryLabel /></a></mt:PageCategories></p>
+            <mt:PageExcerpt>
+            <mt:If tag="entrymore"><p><a href="<mt:PagePermalink>">read more</a></p></mt:If>
+        </div>
+        </mt:Entries>
+
+        <div class="article">
+            <mt:ArchivePrevious><a href="<$mt:ArchiveLink$>">&laquo; <$mt:ArchiveTitle$></a> |</mt:ArchivePrevious>
+            <a href="<$mt:Link template="main_index"$>"><__trans phrase="Main Index"></a> |
+            <a href="<$mt:Link template="archive_index"$>"><__trans phrase="Archives"></a>
+            <mt:ArchiveNext>| <a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$> &raquo;</a></mt:ArchiveNext>
+        </div>
+
+        </div>
+
+        <div class="sidebar">
+
+        <mt:Include module="<__trans phrase="Sidebar">">
+
+        </div>
+
+        <div class="clr"></div>
+
+    </div>
+
+    </div>
+
+<mt:Include module="<__trans phrase="Banner Footer">">
+<mt:Include module="<__trans phrase="Footer">">
+
+</div>
+
+</body>
+
+</html>

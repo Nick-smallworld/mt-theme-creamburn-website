@@ -1,0 +1,20 @@
+<mt:IfArchiveTypeEnabled archive_type="Monthly">
+        <div class="gadget">
+
+     <h2 class="star"><__trans phrase="Monthly Archives"></h2>
+     <div class="clr"></div>
+
+    <nav>
+        <mt:ArchiveList archive_type="Monthly">
+        <ul class="sb_menu">
+            <mt:If tag="ArchiveCount">
+            <li><a href="<mt:ArchiveLink>"><mt:ArchiveTitle></a></li>
+            <mt:Else>
+            <li><span><mt:ArchiveTitle></span></li>
+            </mt:If>
+        </ul>
+        </mt:ArchiveList>
+    </nav>
+
+        </div>
+</mt:IfArchiveTypeEnabled>

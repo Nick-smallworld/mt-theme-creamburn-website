@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!--
+Design by http://www.rocketwebsitetemplates.com
+Movable Type Template by Nick http://smallworld.west-tokyo.com
+Released for free under a Creative Commons Attribution 3.0 License
+-->
+
+<head>
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var user = <$mt:UserSessionState$>;
+    var is_preview = true;
+    /* ]]> */
+    </script>
+<mt:Include module="<__trans phrase="HTML Head">">
+<title><$mt:WebsiteName encode_html="1"$>: <__trans phrase="Previewing your Comment"></title>
+</head>
+
+<body id="<$mt:BlogThemeID$>" onload="mtEntryOnLoad()" onunload="mtEntryOnUnload()">
+
+<div class="main">
+
+<mt:Include module="<__trans phrase="Banner Header">">
+
+    <div class="content">
+
+    <div class="content_resize">
+
+        <div class="mainbar">
+
+        <div class="article">
+
+        <h1 id="page-title"><$mt:Var name="page_title"$></h1>
+
+        <mt:Ignore><!-- Comment Preview --></mt:Ignore>
+        <div class="comment">
+                    <p> <$mt:CommentAuthorIdentity$><span class="vcard author"><$mt:CommentAuthorLink$></span> Says:<br />   <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a></p>
+            <$mt:CommentBody$>
+        </div>
+
+        <mt:Ignore><!-- Comment Form --></mt:Ignore>
+        <div class="comments-open" id="comments-open">
+
+        <h2><__trans phrase="Leave a comment"></h2>
+
+        <mt:Ignore>
+        <!-- Display greeting for users if blog allows users to register locally -->
+        </mt:Ignore>
+            <div id="comment-greeting"></div>
+            <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+                <input type="hidden" name="static" value="1" />
+                <input type="hidden" name="entry_id" value="<$mt:PageID$>" />
+                <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+                <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+                <input type="hidden" name="armor" value="1" />
+                <input type="hidden" name="preview" value="" />
+                <input type="hidden" name="sid" value="" />
+                <ol>
+                    <li>
+                        <label for="comment-author">名前</label>
+                        <input id="comment-author" name="author" size="30" value="<$mt:CommentAuthor encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                    </li>
+                    <li>
+                        <label for="comment-email">電子メール</label>
+                        <input id="comment-email" name="email" size="30" value="<$mt:CommentEmail encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                    </li>
+                    <li>
+                        <label for="comment-url">URL</label>
+                        <input id="comment-url" name="url" size="30" value="<$mt:CommentURL encode_html="1"$>" onfocus="mtShowCaptcha()" />
+                    </li>
+                    <li>
+                       <label for="comment-bake-cookie">ログイン情報を記憶</label>
+                        <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
+                    </li>
+                    <li>
+                    <label for="comment-text">コメント
+                    <mt:IfAllowCommentHTML>(スタイル用のHTMLタグを使えます)</mt:IfAllowCommentHTML></label>
+                    <textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtShowCaptcha()"><$mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"$></textarea>
+                    </li>
+                    <li>
+                    <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="プレビュー" onclick="this.form.preview.value='1';" />
+                    <input type="submit" accesskey="s" name="post" id="comment-submit" value="投稿" />
+                    <input type="button" name="cancel" id="comment-cancel" value="キャンセル" onclick="window.location='<$mt:PagePermalink$>'" />
+                    </li>
+                </ol>
+                <div id="comments-open-captcha"></div>
+
+            </form>
+         </div>
+         </div>
+
+        </div>
+
+        <div class="sidebar">
+
+        <mt:Include module="<__trans phrase="Sidebar">">
+
+        </div>
+
+        <div class="clr"></div>
+
+    </div>
+
+    </div>
+
+<mt:Include module="<__trans phrase="Banner Footer">">
+<mt:Include module="<__trans phrase="Footer">">
+
+</div>
+
+</body>
+
+</html>

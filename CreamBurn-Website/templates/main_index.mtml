@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!--
+Design by http://www.rocketwebsitetemplates.com
+Movable Type Template by Nick http://smallworld.west-tokyo.com
+Released for free under a Creative Commons Attribution 3.0 License
+-->
+
+<head>
+<mt:Include module="<__trans phrase="HTML Head">">
+<title><mt:WebsiteName></title>
+</head>
+
+<body>
+
+<div class="main">
+
+<mt:Include module="<__trans phrase="Banner Header">">
+
+    <div class="content">
+
+    <div class="content_resize">
+
+        <div class="mainbar">
+
+<mt:SetVarBlock name="TopPageCount"><mt:Pages tag="@TOPPAGE"><mt:BlogPageCount></mt:Pages></mt:SetVarBlock>
+<mt:If name="TopPageCount" ge="1">
+    <mt:Pages tag="@TOPPAGE">
+        <div class="article">
+            <h2><mt:Pagetitle></h2><div class="clr"></div>
+            <mt:PageBody>
+            <p class="spec"><a href="<mt:PagePermaLink>" class="rm">Read more</a> &nbsp;|&nbsp; <span class="date"><mt:PageDate format="%B %e, %Y %I:%M %p"></span></p>
+        </div>
+    </mt:Pages>
+<mt:Else>
+    <mt:Entries lastn="3">
+        <div class="article">
+            <h2><a href="<mt:PagePermaLink />"><mt:PageTitle /></a></h2><div class="clr"></div>
+            <p><span class="date"><MTEntryDate format="%B %e, %Y %I:%M %p"></span> &nbsp;|&nbsp Posted by <mt:If tag="AuthorURL"><a href="<mt:AuthorURL>"></mt:If><mt:PageAuthorDisplayName /><mt:If tag="AuthorURL"></a></mt:If> &nbsp;|&nbsp;  Category <mt:PageCategories glue=","><a href="<mt:CategoryArchiveLink />"><mt:CategoryLabel /></a></mt:PageCategories> <a href="<mt:PagePermaLink>" class="com">Comments (<mt:PageCommentCount>) &raquo;</a></p>
+            <mt:If tag="EntryExcerpt"><mt:PageExcerpt><mt:Else><mt:PageBody></mt:If>
+            <mt:If tag="entrymore"><p class="spec"><a href="<mt:PagePermaLink>" class="rm">Read more</a></p></mt:If>
+        </div>
+    </mt:Entries>
+</mt:If>
+
+        </div>
+
+        <div class="sidebar">
+
+        <$mt:Include module="<__trans phrase="Sidebar">"$>
+
+        </div>
+
+        <div class="clr"></div>
+
+    </div>
+
+    </div>
+
+<mt:Include module="<__trans phrase="Banner Footer">">
+<mt:Include module="<__trans phrase="Footer">">
+
+</div>
+
+</body>
+
+</html>

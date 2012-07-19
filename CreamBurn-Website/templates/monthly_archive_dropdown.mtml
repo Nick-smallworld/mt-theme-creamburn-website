@@ -1,0 +1,28 @@
+<mt:IfArchiveTypeEnabled archive_type="Monthly">
+        <div class="gadget">
+
+     <h2 class="star"><__trans phrase="Monthly Archives"></h2>
+     <div class="clr"></div>
+
+    <nav>
+      <select onchange="nav(this)">
+         <option>Select Month</option>
+        <mt:ArchiveList archive_type="Monthly">
+            <mt:If tag="ArchiveCount">
+         <option value="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$></option>
+            </mt:If>
+        </mt:ArchiveList>
+      </select>
+    </nav>
+<script type="text/javascript" charset="utf-8">
+/* <![CDATA[ */
+function nav(sel) {
+   if (sel.selectedIndex == -1) return;
+   var opt = sel.options[sel.selectedIndex];
+   if (opt && opt.value)
+      location.href = opt.value;
+}
+/* ]]> */
+</script>
+        </div>
+</mt:IfArchiveTypeEnabled>

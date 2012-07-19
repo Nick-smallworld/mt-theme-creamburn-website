@@ -1,0 +1,23 @@
+<mt:If tag="AssetCount">
+    <mt:Assets type="image" lastn="6">
+        <mt:AssetsHeader>
+       <h2><span>Image Gallery</span></h2>
+        </mt:AssetsHeader>
+            <MTSetVarBlock name="imgw"><$MTAssetProperty property="image_width"$></MTSetVarBlock>
+            <MTSetVarBlock name="imgh"><$MTAssetProperty property="image_height"$></MTSetVarBlock>
+            <MTIf name="imgw" gt="$imgh">
+        <a href="<$mt:AssetURL$>"><img src="<$mt:AssetThumbnailURL width="58" square="1" $>" alt="<$mt:AssetLabel$>" title="<$mt:AssetLabel$>" /></a>
+            <mt:Else>
+        <a href="<$mt:AssetURL$>"><img src="<$mt:AssetThumbnailURL height="58" square="1" $>" alt="<$mt:AssetLabel$>" title="<$mt:AssetLabel$>" /></a>
+            </mt:If>
+    </mt:Assets>
+
+<mt:Else>
+       <h2><span>Image Gallery</span></h2>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix1.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix2.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix3.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix4.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix5.jpg" width="58" height="58" alt="pix" /></a>
+        <a href="#"><img src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/pix6.jpg" width="58" height="58" alt="pix" /></a>
+</mt:If>
