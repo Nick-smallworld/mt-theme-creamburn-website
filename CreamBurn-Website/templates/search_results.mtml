@@ -13,7 +13,7 @@ Released for free under a Creative Commons Attribution 3.0 License
     var user = <$mt:UserSessionState$>;
     /* ]]> */
     </script>
-     <title><$mt:WebsiteName encode_html="1"$>: <__trans phrase="Search Results"></title>
+     <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Search Results"></title>
     <mt:Ignore>Below Javascript adds ajax search capability</mt:Ignore>
     <script type="text/javascript">
     /* <![CDATA[ */
@@ -99,23 +99,23 @@ Released for free under a Creative Commons Attribution 3.0 License
                 </div>
             <h1 id="page-title">
             <mt:IfStraightSearch>
-                「<$mt:SearchString$>」と一致するもの
+                <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfStraightSearch>
             <mt:IfTagSearch>
-                タグ「<$mt:SearchString$>」が付けられているもの
+                <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfTagSearch>
             </h1>
         </mt:SearchResultsHeader>
 
-        <h2><a href="<mt:PagePermaLink />"><mt:PageTitle /></a></h2>
-        <mt:PageExcerpt>
-        <mt:If tag="entrymore"><p class="spec"><a href="<mt:PagePermaLink>" class="rm">Read more</a></p></mt:If>
+        <h2><a href="<mt:pagePermaLink />"><mt:pageTitle /></a></h2>
+        <mt:pageExcerpt>
+        <mt:If tag="entrymore"><p class="spec"><a href="<mt:pagePermaLink>" class="rm">Read more</a></p></mt:If>
 
         <mt:SearchResultsFooter>
 
         <mt:Ignore><!-- Used with the ajax search capability of the new search class --></mt:Ignore>
                 <div id="content-nav-bottom">
-                    <mt:IfPreviousResults><a href="<$mt:PreviousLink$>" rel="prev" onclick="return swapContent(-1);">&lt; 前</a>&nbsp;&nbsp;</mt:IfPreviousResults><mt:PagerBlock><mt:IfCurrentPage><$mt:Var name="__value__"$><mt:Else><a href="<$mt:PagerLink encode_html="1"$>"><$mt:Var name="__value__"$></a></mt:IfCurrentPage><mt:Unless name="__last__">&nbsp;</mt:Unless></mt:PagerBlock><mt:IfMoreResults>&nbsp;&nbsp;<a href="<$mt:NextLink$>" rel="next" onclick="return swapContent();">次 &gt;</a></mt:IfMoreResults>
+                    <mt:IfPreviousResults><a href="<$mt:PreviousLink$>" rel="prev" onclick="return swapContent(-1);">&lt; <__trans phrase="Previous"></a>&nbsp;&nbsp;</mt:IfPreviousResults><mt:PagerBlock><mt:IfCurrentPage><$mt:Var name="__value__"$><mt:Else><a href="<$mt:PagerLink encode_html="1"$>"><$mt:Var name="__value__"$></a></mt:IfCurrentPage><mt:Unless name="__last__">&nbsp;</mt:Unless></mt:PagerBlock><mt:IfMoreResults>&nbsp;&nbsp;<a href="<$mt:NextLink$>" rel="next" onclick="return swapContent();"><__trans phrase="Next"> &gt;</a></mt:IfMoreResults>
                 </div>
         </mt:SearchResultsFooter>
         </mt:SearchResults>
@@ -128,28 +128,28 @@ Released for free under a Creative Commons Attribution 3.0 License
         <mt:NoSearchResults>
             <h1 id="page-title" class="search-results-header">
             <mt:IfStraightSearch>
-                「<$mt:SearchString$>」と一致するもの
+                <__trans phrase="Results matching &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfStraightSearch>
             <mt:IfTagSearch>
-                 タグ「<$mt:SearchString$>」が付けられているもの
+                 <__trans phrase="Results tagged &ldquo;[_1]&rdquo;" params="<$mt:SearchString$>">
             </mt:IfTagSearch>
             </h1>
 
-            <p>「<$mt:SearchString$>」と一致する結果は見つかりませんでした。</p>
+            <p><__trans phrase="No results found for &ldquo;[_1]&rdquo;." params="<$mt:SearchString$>"></p>
         </mt:NoSearchResults>
 
         <mt:Ignore><!-- Display instructions for searching if search script was accessed without a query --></mt:Ignore>
         <mt:NoSearch>
 
-            <h1 id="page-title" class="search-results-header">例</h1>
-                <p>すべての単語が順序に関係なく検索されます。フレーズで検索したいときは引用符で囲んでください。</p>
+            <h1 id="page-title" class="search-results-header"><__trans phrase="Instructions"></h1>
+                <p><__trans phrase="By default, this search engine looks for all words in any order. To search for an exact phrase, enclose the phrase in quotes:"></p>
                 <blockquote>
-                    <p><code>"movable type"</code></p>
+                    <p><code>"<__trans phrase="movable type">"</code></p>
                 </blockquote>
-                    <p>AND、OR、NOTを入れることで論理検索を行うこともできます。</p>
+                    <p><__trans phrase="The search engine also supports AND, OR, and NOT keywords to specify boolean expressions:"></p>
                 <blockquote>
-                    <p><code>個人 OR 出版</code></p>
-                    <p><code>個人 NOT 出版</code></p>
+                    <p><code><__trans phrase="personal OR publishing"></code></p>
+                    <p><code><__trans phrase="publishing NOT personal"></code></p>
                 </blockquote>
         </mt:NoSearch>
 

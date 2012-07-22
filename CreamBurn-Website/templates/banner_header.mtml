@@ -1,46 +1,41 @@
 <mt:Ignore><!--
 Defining mt:var and enter pagetitle to judge whether current page is active or not
-
 --></mt:Ignore>
 <mt:If name="page_archive" eq="1"><mt:SetVarBlock name="PID"><mt:PageID></mt:SetVarBlock></mt:If>
 
-<div class="header">
+    <div class="header">
     <div class="header_resize">
-    <div id="pagetop">
-        <div class="logo"><h1><a href="<mt:BlogURL>"><span><mt:WebsiteName></span> <small><mt:BlogDescription></small></a></h1></div>
+        <div id="pagetop">
+        <div class="logo"><h1><a href="<mt:WebsiteURL>"><span><mt:BlogName></span> <small><mt:BlogDescription></small></a></h1></div>
         <div class="searchform">
             <form id="formsearch" name="formsearch" method="post" action="<mt:CGIPath><mt:SearchScript>">
                 <span><input name="search" class="editbox_search" id="search" maxlength="80" value="<$mt:SearchString$>" type="text"></span>
-                <mt:If name="search_results">
-                    <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>">
-                <mt:Else>
-                    <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>">
-                </mt:If>
-                <input type="hidden" name="limit" value="10">
-                <input name="button_search" src="<$MTStaticWebPath$>support/theme_static/CreamBurn/images/search_btn.gif" class="button_search" type="image" alt="search">
+              <mt:If name="search_results">
+                <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>">
+              <mt:Else>
+                <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>">
+              </mt:If>
+                <input type="hidden" name="limit" value="<mt:SearchMaxResults>">
+                <input name="button_search" src="<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/search_btn.gif" class="button_search" type="image" alt="search">
             </form>
         </div>
-    </div>
+        </div>
     <div class="clr"></div>
     <div class="htext">
-<h2>time at work business</h2>
+        <h2>time at work business</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac magna a turpis ornare aliquam id hendrerit nisl.</p>
         <p>Pellentesque adipiscing blandit mollis. Curabitur varius est et sem rhoncus et pretium massa molestie. Vestibulum mattis justo ultricies mauris fringilla rutrum. &nbsp; </p>
-      </div>
-          <div class="clr"></div>
-      <div class="menu_nav">
-        <ul>
-        <li<mt:If name="main_index"> class="active"</mt:If>><a href="<mt:BlogURL>">Home</a></li>
-        <mt:Pages tag="@SITE_NAV_PAGE">
-        <mt:SetVarBlock name="PageID"><mt:pageid></mt:SetVarBlock>
-        <li<mt:If name="PID" eq="$pageid"> class="active"</mt:If>><a href="<mt:PagePermaLink>"><mt:PageTitle></a></li>
-        </mt:Pages>
-        <li<mt:If name="archive_index"> class="active"
-           <mt:ElseIf name="archive_listing"> class="active"
-           <mt:ElseIf name="entry_archive"> class="active"</mt:If>>
-           <a href="<mt:Link template="<__trans phrase="Archive Index">">">Blog</a></li>
-        </ul>
-      </div>
-      <div class="clr"></div>
     </div>
-  </div>
+    <div class="clr"></div>
+    <nav class="menu_nav">
+        <ul>
+            <li<mt:If name="main_index"> class="active"</mt:If>><a href="<mt:WebsiteURL>"><__trans phrase="Home"></a></li>
+            <mt:Pages tag="@SITE_NAV_PAGE">
+            <mt:SetVarBlock name="PageID"><mt:pageid></mt:SetVarBlock>
+            <li<mt:If name="PID" eq="$pageid"> class="active"</mt:If>><a href="<mt:PagePermaLink>"><mt:PageTitle></a></li>
+            </mt:Pages>
+        </ul>
+    </nav>
+    <div class="clr"></div>
+    </div>
+    </div>

@@ -21,7 +21,7 @@ Released for free under a Creative Commons Attribution 3.0 License
     <$mt:Var name="page_title" value="<__trans phrase="Comment Submission Error">"$>
     <mt:SetVarBlock name="message"><p><__trans phrase="Your comment submission failed for the following reasons: [_1]" params="<$mt:ErrorMessage$>"></p></mt:SetVarBlock>
 </mt:If>
-    <title><$mt:WebsiteName encode_html="1"$>: <$mt:Var name="page_title"$></title>
+    <title><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></title>
 </head>
 
 <body id="<$mt:BlogThemeID$>">
@@ -40,7 +40,13 @@ Released for free under a Creative Commons Attribution 3.0 License
 
         <h1 id="page-title"><$mt:Var name="page_title"$></h1>
         <$mt:Var name="message"$>
-        <p><a href="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:PageLink$></mt:If>">元の記事</a>に戻る</p>
+        <p>
+            <mt:If name="comment_error">
+            <__trans phrase="Return to <a href="[_1]">your comment</a>." params="javascript:history.back()">
+            <mt:Else>
+            <__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<$mt:EntryLink$>">
+            </mt:If>
+        </p>
 
        </div>
 

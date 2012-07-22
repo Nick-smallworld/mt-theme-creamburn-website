@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 3.0 License
 
 <head>
 <mt:Include module="<__trans phrase="HTML Head">">
-<title><mt:WebsiteName></title>
+<title><mt:BlogName></title>
 </head>
 
 <body>
@@ -26,14 +26,12 @@ Released for free under a Creative Commons Attribution 3.0 License
 <mt:Include module="BreadCrumbs">
 
         <div class="article">
-            <table>
-        <mt:Pages lastn="0" folder="<__trans phrase="blog">">
-              <tr>
-                  <th><a href="<mt:PagePermaLink>"><mt:PageTitle></a></th>
-                  <td><MTEntryDate format="%B %e, %Y"></td>
-              </tr>
-        </mt:Pages>
-            </table>
+        <h2><__trans phrase="blog"></h2>
+            <ul id="blog-list">
+            <mt:Pages lastn="0" folder="<__trans phrase="blog">">
+            <li><span class="list-title"><a href="<mt:PagePermaLink>"><mt:PageTitle></a></span><div class="list-date"><MTPageDate format="%B %e, %Y"></div><div class="clr"></div></li>
+            </mt:Pages>
+            </ul>
         </div>
 
         </div>

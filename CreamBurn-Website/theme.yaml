@@ -3,7 +3,8 @@ id: mt-theme-creamburn-website
 name: CreamBurn-Website
 author_name: Nick
 author_link: http://www.linkedin.com/pub/takeshi-osanai/10/3a/3a5
-version: '1.0'
+doc_link: https://github.com/Nick-smallworld/mt-theme-creamburn-website
+version: '0.1'
 class: website
 description: '<__trans phrase="CreamBurn is a theme for SMBs website and personal blog.">'
 thumbnail_file: thumb.jpg
@@ -17,10 +18,6 @@ elements:
       label: exported_template set
       templates: 
         index: 
-          archive_index: 
-            label: Archive Index
-            outfile: blog.html
-            rebuild_me: 1
           feed_recent: 
             label: 'Feed - Recent Entries'
             outfile: atom.xml
@@ -76,8 +73,6 @@ elements:
           search_results: 
             label: Search Results
         widget: 
-          about_this_page: 
-            label: About This Page
           creative_commons: 
             label: Creative Commons
           pages_list: 
@@ -106,8 +101,6 @@ elements:
     data: 
       about: 
         label: About
-      blog:
-        label: Blog
     importer: default_folders
   default_pages: 
     component: ~
@@ -116,16 +109,16 @@ elements:
         allow_comments: 1
         allow_pings: 1
         authored_on: '20120705221149'
-        basename: about_1
+        basename: nonav
         convert_breaks: 0
         created_on: '20120705221243'
         excerpt: ''
-        folder: about
+        folder: About
         keywords: ''
         modified_on: '20120705221411'
         status: 2
         tags: '@NOT_DISPLAY_NAV,'
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        text: "<p>This page is not listed on sidebar, because using @NOT_DISPLAY_NAV tag.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
         text_more: ''
         title: No Nav
       toppage: 
@@ -160,11 +153,11 @@ elements:
         text: "<p>This is a sample template for contact form. Please implement arbitrary form program you want to use.</p> \n\n          <form action=\"#\" method=\"post\" id=\"sendemail\">\n          <ol><li>\n            <label for=\"name\">Name (required)</label>\n            <input id=\"name\" name=\"name\" class=\"text\" />\n          </li><li>\n            <label for=\"email\">Email Address (required)</label>\n            <input id=\"email\" name=\"email\" class=\"text\" />\n          </li><li>\n            <label for=\"website\">Website</label>\n            <input id=\"website\" name=\"website\" class=\"text\" />\n          </li><li>\n            <label for=\"message\">Your Message</label>\n            <textarea id=\"message\" name=\"message\" rows=\"8\" cols=\"50\"></textarea>\n          </li><li>\n            <input type=\"button\" name=\"imageField\" id=\"imageField\" class=\"send\" value=\"submit\" />\n            <div class=\"clr\"></div>\n          </li></ol>\n          </form>"
         text_more: ''
         title: Contact
-      about: 
+      index: 
         allow_comments: 1
         allow_pings: 1
         authored_on: '20120705222906'
-        basename: about
+        basename: index
         convert_breaks: 0
         created_on: '20120705222957'
         excerpt: ''
@@ -173,7 +166,7 @@ elements:
         modified_on: '20120709182601'
         status: 2
         tags: "@SITE_NAV_PAGE"
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+        text: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n\n\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"</p>"
         text_more: ''
         title: About
     importer: default_pages

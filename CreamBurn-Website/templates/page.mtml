@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 3.0 License
 
 <head>
 <mt:Include module="<__trans phrase="HTML Head">">
-<title><mt:PageTitle /> | <mt:WebsiteName /></title>
+<title><mt:PageTitle /> | <mt:BlogName /></title>
 </head>
 
 <body>
@@ -27,14 +27,15 @@ Released for free under a Creative Commons Attribution 3.0 License
 
         <div class="article">
             <h2><mt:PageTitle /></h2><div class="clr"></div>
-            <p>Posted by <mt:If tag="AuthorURL"><a href="<mt:AuthorURL>"></a></mt:If><mt:PageAuthorDisplayName /><mt:If tag="AuthorURL"></a></mt:If></p>
+            <p>Posted by <mt:If tag="AuthorURL"><a href="<mt:AuthorURL>"></a></mt:If><mt:pageAuthorDisplayName /><mt:If tag="AuthorURL"></a></mt:If></p>
             <mt:PageBody>
             <mt:PageMore>
-            <p>Tagged: <mt:PageTags glue=", "><a href="<mt:TagSearchLink>"><mt:TagName></a></mt:PageTags></p>
             <p><MTPageDate format="%B %e, %Y %I:%M %p"></p>
         </div>
 
+        <mt:Ignore>  <!- if you want to allow comment to webpages, pllease remove ignore tags. -->
         <mt:Include module="<__trans phrase="Comments">">
+        </mt:Ignore>
         </div>
 
         <div class="sidebar">

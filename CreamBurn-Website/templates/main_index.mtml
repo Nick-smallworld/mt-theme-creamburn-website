@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 3.0 License
 
 <head>
 <mt:Include module="<__trans phrase="HTML Head">">
-<title><mt:WebsiteName></title>
+<title><mt:BlogName></title>
 </head>
 
 <body>
@@ -33,14 +33,14 @@ Released for free under a Creative Commons Attribution 3.0 License
         </div>
     </mt:Pages>
 <mt:Else>
-    <mt:Entries lastn="3">
+    <mt:pages lastn="3">
         <div class="article">
-            <h2><a href="<mt:PagePermaLink />"><mt:PageTitle /></a></h2><div class="clr"></div>
-            <p><span class="date"><MTEntryDate format="%B %e, %Y %I:%M %p"></span> &nbsp;|&nbsp Posted by <mt:If tag="AuthorURL"><a href="<mt:AuthorURL>"></mt:If><mt:PageAuthorDisplayName /><mt:If tag="AuthorURL"></a></mt:If> &nbsp;|&nbsp;  Category <mt:PageCategories glue=","><a href="<mt:CategoryArchiveLink />"><mt:CategoryLabel /></a></mt:PageCategories> <a href="<mt:PagePermaLink>" class="com">Comments (<mt:PageCommentCount>) &raquo;</a></p>
-            <mt:If tag="EntryExcerpt"><mt:PageExcerpt><mt:Else><mt:PageBody></mt:If>
-            <mt:If tag="entrymore"><p class="spec"><a href="<mt:PagePermaLink>" class="rm">Read more</a></p></mt:If>
+            <h2><a href="<mt:pagePermaLink />"><mt:pageTitle /></a></h2><div class="clr"></div>
+            <p><span class="date"><MTPageDate format="%B %e, %Y %I:%M %p"></span> &nbsp;|&nbsp Posted by <mt:If tag="AuthorURL"><a href="<mt:AuthorURL>"></mt:If><mt:pageAuthorDisplayName /><mt:If tag="AuthorURL"></a></mt:If></p>
+            <mt:If tag="PageExcerpt"><mt:pageExcerpt><mt:Else><mt:pageBody></mt:If>
+            <mt:If tag="pagemore"><p class="spec"><a href="<mt:pagePermaLink>" class="rm">Read more</a></p></mt:If>
         </div>
-    </mt:Entries>
+    </mt:pages>
 </mt:If>
 
         </div>
