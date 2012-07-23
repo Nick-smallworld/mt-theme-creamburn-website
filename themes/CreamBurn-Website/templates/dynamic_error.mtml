@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+Design by http://www.rocketwebsitetemplates.com
+Movable Type Template by Nick http://smallworld.west-tokyo.com
+Released for free under a Creative Commons Attribution 3.0 License
+-->
+
+<head>
+<mt:Include module="<__trans phrase="HTML Head">">
+<title><$mt:BlogName encode_html="1"$>: <__trans phrase="Page Not Found"></title>
+</head>
+
+<body id="<$mt:BlogThemeID$>">
+
+<div class="main">
+
+<mt:Include module="<__trans phrase="Banner Header">">
+
+    <div class="content">
+
+    <div class="content_resize">
+
+        <div class="mainbar">
+
+        <div class="article">
+
+        <h1 id="page-title"><__trans phrase="Page Not Found"></h1>
+         <blockquote>
+         <strong><mt:ErrorMessage></strong>
+         </blockquote>
+        </div>
+
+        <div class="sidebar">
+
+        <mt:Include module="<__trans phrase="Sidebar">">
+
+        </div>
+
+        <div class="clr"></div>
+
+    </div>
+
+    </div>
+
+<mt:Include module="<__trans phrase="Banner Footer">">
+<mt:Include module="<__trans phrase="Footer">">
+
+</div>
+
+</body>
+
+</html>

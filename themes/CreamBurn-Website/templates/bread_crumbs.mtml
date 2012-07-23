@@ -1,0 +1,13 @@
+<mt:If name="page_template" eq="1">
+    <div class="breadcrumb">
+        <a href="<mt:WebsiteURL>"><__trans phrase="Home"></a> ≫
+        <mt:ParentFolders exclude_current="0">
+        <a href="<mt:WebsiteURL><mt:FolderPath>/"><mt:FolderLabel></a> ≫
+        </mt:ParentFolders>
+        <mt:PageTitle>
+    </div>
+<mt:ElseIf name="archive_index" eq="1">
+    <div class="breadcrumb">
+        <a href="<mt:WebsiteURL>"><__trans phrase="Home"></a> &raquo; <__trans phrase="blog">
+    </div>
+</mt:If>

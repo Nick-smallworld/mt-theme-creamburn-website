@@ -1,0 +1,106 @@
+<mt:Ignore>
+<!-- Display comments for the entry/page or commenting form if entry/page is accepting comments -->
+</mt:Ignore>
+<mt:IfCommentsActive>
+
+    <mt:Ignore>
+    <!-- Display comments -->
+    </mt:Ignore>
+    <div class="article">
+    <mt:Comments lastn="$comments_per_page">
+
+        <mt:CommentsHeader>
+    <h3><$mt:EntryCommentCount singular="1" plural="#" none="0"$> Responses</h3>
+        </mt:CommentsHeader>
+       <$mt:Include module="<__trans phrase="Comment Detail">"$>
+</mt:Comments>
+</div>
+    <mt:Ignore>
+    <!-- Display commenting form if entry/page is accepting comments -->
+    </mt:Ignore>
+    <mt:IfCommentsAccepted>
+    <div class="comments-open" id="comments-open">
+    <div class="article">
+        <h3 class="comments-open-header"><__trans phrase="Leave a comment"></h3>
+    <div class="comments-open-content">
+
+        <mt:Ignore>
+        <!-- Display greeting for users if blog allows users to register locally -->
+        </mt:Ignore>
+            <div id="comment-greeting"></div>
+            <form method="post" action="/nospam.html" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+
+                <script type="text/javascript">
+                <!--
+                document.comments_form.action = '<$MTCGIPath$>'+'<$MTCommentScript$>';
+                document.comments_form.email.value = getCookie("mtcmtmail");
+                document.comments_form.author.value = getCookie("mtcmtauth");
+                document.comments_form.url.value = getCookie("mtcmthome");
+
+                if (getCookie("mtcmtauth")) {
+                document.comments_form.bakecookie[0].checked = true;
+                } else {
+                document.comments_form.bakecookie[1].checked = true;
+
+                }
+                //-->
+                </script>
+
+                <input type="hidden" name="static" value="1" />
+                <input type="hidden" name="entry_id" value="<$mt:pageID$>" />
+                <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+                <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
+                <input type="hidden" name="armor" value="1" />
+                <input type="hidden" name="preview" value="" />
+                <input type="hidden" name="sid" value="" />
+                 <div id="comments-open-data">
+                <ol>
+                    <li>
+
+                        <label for="comment-author"><__trans phrase="Name"></label>
+                        <input id="comment-author" name="author" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </li>
+                    <li>
+                        <label for="comment-email"><__trans phrase="Email Address"></label>
+                        <input id="comment-email" name="email" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </li>
+                    <li>
+                        <label for="comment-url"><__trans phrase="URL"></label>
+                        <input id="comment-url" name="url" size="30" value="" onfocus="mtCommentFormOnFocus()" />
+                    </li>
+                    <li>
+                       <label for="comment-bake-cookie"><__trans phrase="Remember personal info?"></label>
+                        <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
+                   </li>
+                 </ol>
+            </div>
+              <div id="comment-form-reply" style="display:none">
+                    <input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" />
+                    <label for="comment-reply" id="comment-reply-label"></label>
+                </div>
+                  <ol>
+                    <li>
+                    <label for="comment-text"><__trans phrase="Comments">
+                    <mt:IfAllowCommentHTML><__trans phrase="(You may use HTML tags for style)"></mt:IfAllowCommentHTML></label>
+                    <textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtCommentFormOnFocus()"></textarea>
+                    </li>
+                    <li>
+                    <input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="<__trans phrase="Preview">" onclick="this.form.preview.value='1';" />
+                    <input type="submit" accesskey="s" name="post" id="comment-submit" value="<__trans phrase="Submit">" />
+                    </li>
+                </ol>
+                <div id="comments-open-captcha"></div>
+
+            </form>
+    </div>
+        </div>
+</div>
+    <script type="text/javascript">
+    <!--
+    mtAttachEvent("load", mtEntryOnLoad);
+    mtAttachEvent("unload", mtEntryOnUnload);
+    //-->
+    </script>
+    </mt:IfCommentsAccepted>
+
+</mt:IfCommentsActive>
