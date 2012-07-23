@@ -1,0 +1,19 @@
+        <div class="gadget">
+            <h2 class="star"><__trans phrase="Pages"></h2>
+            <div class="clr"></div>
+            <ul class="sb_menu">
+                <mt:Pages no_folder="1" tag="NOT @NOT_DISPLAY_NAV">
+                <li><a href="<mt:PagePermaLink>"><mt:PageTitle></a></li>
+                </mt:Pages>
+            </ul>
+            <mt:SubFolders top="1">
+            <mt:If tag="FolderCount">
+            <h3><mt:FolderLabel></h3>
+            <ul class="sb_menu">
+                <mt:Pages folder="<mt:FolderLabel>" tag="NOT @NOT_DISPLAY_NAV">
+                <li><a href="<mt:PagePermaLink>"><mt:PageTitle></a></li>
+                </mt:Pages>
+            </ul>
+            </mt:If>
+            </mt:SubFolders>
+        </div>
