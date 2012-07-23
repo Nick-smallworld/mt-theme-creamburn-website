@@ -1,4 +1,4 @@
-# Theme for Movable Type 5 "CreamBurn” #
+# Theme for Movable Type 5 "CreamBurn-Website” #
 
 ## What’s this? ##
 “CreamBurn” is a theme for Movable Type 5. This theme is distributed under the Creative Commons license. You can use this theme both for personal and business under the CC license.
@@ -6,14 +6,14 @@
 This theme is appropriate for SMB’s website and personal blog, as a base of customization. In default this theme is half-made status, and includes some dummy texts and images. Pleaese customize them when you use.
 
 ## Name ##
-CreamBurn
+CreamBurn-Website
 
 ## CMS ##
 Movable Type 5.x upper
-(for Blog)
+(for Website)
 
 ## Corresponding browser ##
-Goole Chrome(latest
+Goole Chrome(latest)
 FireFox(latest)
 Internet Explorler 8,9
 Safari 5.1
@@ -29,17 +29,22 @@ http://creativecommons.org/licenses/by/3.0/
 
 ## Support ##
 Sorry but no support service is available.  
-Though any feedback and opinions are welcome.
+Though any feedback, indication of bugs, and pull requests are welcome.
 
 ## Etc. ##
 This templates is originally distributed in website “Rocket Website Templates”.
 http://www.rocketwebsitetemplates.com/
 The original copyright of design belongs to them.
+
+For developing "Blog", another theme "CreamBurn" is on Github.
+
+https://github.com/Nick-smallworld/mt-theme-creamburn
+
+
 ## Installation##
 After downloading, unzip and deploy all files to /path/to/mt/themes/ directory.  After uploading, please apply the theme in admin-screen and rebuild a blog.
 
-Theme’s static files (i.e. images and js files) will be automatically relocated under 　
-　/mt-static/support/theme_static/CreamBurn/ directory.  Please pay attention if you want to adjust a design. Please visit the theme’s documentation page for more detail information.
+Theme’s static files (i.e. images and js files) will be automatically relocated under /mt-static/support/theme_static/CreamBurn-Website/ directory.  Please pay attention if you want to adjust a design. Please visit the theme’s documentation page for more detail information.
 
 http://www.movabletype.org/documentation/themes/index.html
 
@@ -84,11 +89,6 @@ This theme has some sample page data and folders in default. If you don’t need
 ### Dummy message on main image ###
 In default, dummy message will be appeared on main image.
 This message has written in “Banner Header” template. Please modify as you like.
-
-### If you want to use an make blog quickly ###
-
-1. Delete “Banner Footer” including line from all templates
-2. Delete all data in “Banner Footer” template
 
 ## Exemption from liability ##
 Author don’t have any responsibility for any damages, loss or expenses with usage of the templates. 
