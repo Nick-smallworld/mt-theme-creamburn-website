@@ -9,7 +9,7 @@ Movable Type 5 用のテーマ「CreamBurn」です。Creative Commons ライセ
 CreamBurn
 
 ## 対応CMS ##
-Movable Type 5.x　以上　
+Movable Type 5.x 以上
 (ブログ用テーマ)
 
 ## 対応ブラウザ ##
@@ -32,13 +32,13 @@ http://creativecommons.org/licenses/by/3.0/deed.ja
 テーマのフォーク、カスタマイズ、プルリクエストなどもご自由にどうぞ。
 
 ## その他 ##
-このテーマは、「RocketWebsiteTemplates」様で配布されていた、ウェブサイト用のテンプレートを、Movable Type用にカスタマイズしたものです。　デザインの著作権は、RocketWebsiteTemplatesに帰属します。
+このテーマは、「RocketWebsiteTemplates」様で配布されていた、ウェブサイト用のテンプレートを、Movable Type用にカスタマイズしたものです。デザインの著作権は、RocketWebsiteTemplatesに帰属します。
 
 ## インストール方法 ##
 ダウンロード後、解凍して「CreamBurn」以下のフォルダを、全て /path/to/mt/themes/ 以下にアップロードして下さい。アップロード後、MTの管理画面から、テーマを適用して、再構築を行なって下さい。
 
-テーマ適用後、テーマファイル内に含まれる静的ファイル（画像、jsファイルなど）は、　
-　/mt-static/support/theme_static/CreamBurn/　以下に自動的に配置されます。CSSや画像の調整が必要な場合は、上記ご注意下さい。詳しくはテーマに関するドキュメントをご覧ください。
+テーマ適用後、テーマファイル内に含まれる静的ファイル（画像、jsファイルなど）は、
+/mt-static/support/theme_static/CreamBurn/ 以下に自動的に配置されます。CSSや画像の調整が必要な場合は、上記ご注意下さい。詳しくはテーマに関するドキュメントをご覧ください。
 http://www.movabletype.jp/documentation/developer/theme/#file
 
 
