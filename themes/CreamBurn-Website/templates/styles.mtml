@@ -10,14 +10,15 @@ body {
     width: 100%;
     color: #959595;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.1em;
     font-family:Arial, Helvetica, sans-serif;
 }
 html,
 .main {
     padding: 0;
     margin: 0;
-    background: #f5f1e6 url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/main_bg.gif) repeat-y center center;
+    background: #f5f1e6 url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/main_bg.gif) repeat-y center center;
 }
 .clr {
     clear: both;
@@ -38,19 +39,22 @@ h1 {
     color: #3a3b3b;
     font-weight: bold;
     font-size: 36px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: -2px;
 }
 
 .article h1 {
     font-size: 28px;
+    line-height: 1em;
 }
 
 .article ul {
     margin-left: 40px;
 }
 
-h1 span { color: #ebc42b }
+h1 span {
+    color: #ebc42b;
+}
 h1 a,
 h1 a:hover {
     color: #3a3b3b;
@@ -59,16 +63,18 @@ h1 a:hover {
 h1 small {
     display: block;
     padding-left: 140px;
+    padding-top: 1em;
     font-weight: normal;
     font-size: 12px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
     color: #959595;
     letter-spacing: normal;
 }
 h2 {
     font-weight: normal;
     font-size: 24px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    line-height: 1em;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 8px 0;
     margin: 8px 0;
     color: #323a3f;
@@ -77,8 +83,9 @@ p {
     margin: 8px 0;
     padding: 0 0 8px 0;
     font-weight: normal;
-    font-size: 12px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 1em;
+    line-height: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 p.spec { text-align: left }
 a {
@@ -104,9 +111,14 @@ ul,
 .content {
     margin: 5px 0 20px 0;
 }
+
+img {
+    border-style:none;
+}
+
 /* header */
-.header { background: url(<mmt:WebsiteURL>images/header_bg.jpg) no-repeat center 88px }
-.header_resize {
+.header {
+    background: url(<mmt:BlogURL>images/header_bg.jpg) no-repeat center 88px;
     margin: 0 auto;
     padding: 0;
     width: 970px;
@@ -115,20 +127,20 @@ ul,
     margin: 0;
     padding: 24px 520px 24px 60px;
     height: 194px;
-    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/hbg_img.jpg) no-repeat center center;
+    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/hbg_img.jpg) no-repeat center center;
 }
 .header .htext h2 {
     color: #fff;
     font-weight: normal;
     font-size: 24px;
-    /* font-family: Arial, Helvetica, sans-serif;  */
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 .header .htext p {
     color: #fff;
     font-weight: bold;
     font-size: 14px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header .htext a {
     color: #fff;
@@ -136,33 +148,35 @@ ul,
 }
 /* menu */
 .menu_nav {
-    margin: 0;
-    padding: 0 24px;
+    margin: 0 24px 0 24px;
     height: 65px;
-    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/menu.gif) repeat-x center top;
+    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/menu.gif) repeat-x center top;
 }
-.menu_nav ul { list-style: none }
+.menu_nav ul {
+    list-style: none;
+}
+
 .menu_nav ul li {
     margin: 0;
     padding: 10px 2px 0 0;
     float: left;
-    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/menu_sep.gif) no-repeat right center;
+    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/menu_sep.gif) no-repeat right center;
 }
 .menu_nav ul li a {
     display: block;
     margin: 0;
-    padding: 17px 24px 16px;
+    padding: 24px 24px 16px;
     color: #959595;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.3em;
 }
 .menu_nav ul li.active a,
 .menu_nav ul li a:hover {
     color: #fff;
-    background: #f00 url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/menu_a.gif) repeat-x center;
+    background: #f00 url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/menu_a.gif) repeat-x center;
 }
 /* content */
-.content_resize {
+.content {
     margin: 0 auto;
     padding: 24px 0 0;
     width: 970px;
@@ -217,7 +231,7 @@ ul.sb_menu li a:hover,
 ul.ex_menu li a:hover {
     color: #ebc42b;
     font-weight: bold;
-    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/li_a.gif) no-repeat left center;
+    background: url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/li_a.gif) no-repeat left center;
 }
 ul.sb_menu li a:hover { text-decoration: underline }
 ul.ex_menu li a:hover { text-decoration: none }
@@ -276,8 +290,7 @@ ul.ex_menu li a:hover { text-decoration: none }
     float: left;
 }
 /* footer */
-.footer { }
-.footer_resize {
+.footer {
     margin: 0 auto;
     padding: 24px 40px;
     width: 890px;
@@ -349,7 +362,7 @@ ol li .send { margin: 16px 0 0 0 }
     margin: 6px 0;
     padding: 0;
     float: left;
-    background: #fff url(<$MTStaticWebPath$>support/theme_static/CreamBurn-Website/images/search.gif) no-repeat top left;
+    background: #fff url(<$MTStaticWebPath$>support/theme_static/CreamBurn/images/search.gif) no-repeat top left;
 }
 #formsearch input.editbox_search {
     margin: 0;
@@ -360,7 +373,7 @@ ol li .send { margin: 16px 0 0 0 }
     background: none;
     font-weight: normal;
     font-size: 12px;
-    /* font-family: Arial, Helvetica, sans-serif;  */
+    font-family: Arial, Helvetica, sans-serif;
     color: #a8acb2;
 }
 #formsearch input.button_search {
