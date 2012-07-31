@@ -23,31 +23,29 @@ Released for free under a Creative Commons Attribution 3.0 License
 
 <mt:Include module="<__trans phrase="Banner Header">">
 
-    <div class="content">
+<div class="content">
 
-    <div class="content_resize">
+    <div class="mainbar">
 
-        <div class="mainbar">
+    <div class="article">
 
-        <div class="article">
-
-        <h1 id="page-title"><$mt:Var name="page_title"$></h1>
+    <h1 id="page-title"><$mt:Var name="page_title"$></h1>
 
         <mt:Ignore><!-- Comment Preview --></mt:Ignore>
         <div class="comment">
-                    <p> <$mt:CommentAuthorIdentity$><span class="vcard author"><$mt:CommentAuthorLink$></span> Says:<br />   <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a></p>
+            <p> <$mt:CommentAuthorIdentity$><span class="vcard author"><$mt:CommentAuthorLink$></span> Says:<br />   <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a></p>
             <$mt:CommentBody$>
         </div>
 
-        <mt:Ignore><!-- Comment Form --></mt:Ignore>
-        <div class="comments-open" id="comments-open">
+    <mt:Ignore><!-- Comment Form --></mt:Ignore>
+    <div class="comments-open" id="comments-open">
 
         <h2><__trans phrase="Leave a comment"></h2>
 
         <mt:Ignore>
         <!-- Display greeting for users if blog allows users to register locally -->
         </mt:Ignore>
-            <div id="comment-greeting"></div>
+        <div id="comment-greeting"></div>
             <form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
                 <input type="hidden" name="static" value="1" />
                 <input type="hidden" name="entry_id" value="<$mt:pageID$>" />
@@ -70,7 +68,7 @@ Released for free under a Creative Commons Attribution 3.0 License
                         <input id="comment-url" name="url" size="30" value="<$mt:CommentURL encode_html="1"$>" onfocus="mtShowCaptcha()" />
                     </li>
                     <li>
-                       <label for="comment-bake-cookie"><__trans phrase="Remember personal info?"></label>
+                        <label for="comment-bake-cookie"><__trans phrase="Remember personal info?"></label>
                         <input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" value="1" accesskey="r" />
                     </li>
                     <li>
@@ -87,27 +85,26 @@ Released for free under a Creative Commons Attribution 3.0 License
                 <div id="comments-open-captcha"></div>
 
             </form>
-         </div>
-         </div>
+        </div><!-- end comments-open -->
 
-        </div>
+    </div><!-- end article -->
+    
+    </div><!-- end mainbar -->
 
-        <div class="sidebar">
+    <div class="sidebar">
 
-        <mt:Include module="<__trans phrase="Sidebar">">
+    <mt:Include module="<__trans phrase="Sidebar">">
 
-        </div>
+    </div><!-- end sidebar -->
 
-        <div class="clr"></div>
+    <div class="clr"></div>
 
-    </div>
-
-    </div>
+</div><!-- end content -->
 
 <mt:Include module="<__trans phrase="Banner Footer">">
 <mt:Include module="<__trans phrase="Footer">">
 
-</div>
+</div><!-- end main -->>
 
 </body>
 

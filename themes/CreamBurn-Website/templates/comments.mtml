@@ -13,8 +13,8 @@
     <h3><$mt:EntryCommentCount singular="1" plural="#" none="0"$> Responses</h3>
         </mt:CommentsHeader>
        <$mt:Include module="<__trans phrase="Comment Detail">"$>
-</mt:Comments>
-</div>
+    </mt:Comments>
+    </div>
     <mt:Ignore>
     <!-- Display commenting form if entry/page is accepting comments -->
     </mt:Ignore>
@@ -47,7 +47,7 @@
                 </script>
 
                 <input type="hidden" name="static" value="1" />
-                <input type="hidden" name="entry_id" value="<$mt:pageID$>" />
+                <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
                 <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
                 <input type="hidden" name="parent_id" value="<$mt:CommentParentID escape="html"$>" id="comment-parent-id" />
                 <input type="hidden" name="armor" value="1" />
@@ -92,9 +92,9 @@
                 <div id="comments-open-captcha"></div>
 
             </form>
-    </div>
         </div>
-</div>
+        </div>
+    </div>
     <script type="text/javascript">
     <!--
     mtAttachEvent("load", mtEntryOnLoad);
